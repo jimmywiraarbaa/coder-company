@@ -1,0 +1,395 @@
+*{
+    font-family: "Montserrat";
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+hmtl, body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h1{
+    font-weight: 600;
+    font-size: 36px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+}
+
+p{
+    color: #979797;
+    margin: 0 0 16px 0;
+    font-size: 22px;
+}
+
+/* Image */
+img,iframe{
+    width: 100%;
+}
+
+/* Header */
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 128px;
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(24px);
+    z-index: 1000;
+}
+
+#header h1{
+    margin: 0;
+}
+/* Header End */
+
+/* Navigasi */
+nav > a{
+    margin-left: 12px;
+}
+
+nav > a:hover{
+    color: #FFc108;
+}
+
+/* Navigasi End */
+
+/* Section */
+section{
+    padding: 48px 100px;
+}
+
+/* Landing */
+#landing{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 24px;
+}
+#landing > div{
+    width: 50%;
+}
+
+#landing p{
+    margin-bottom: 32px;
+}
+
+.btn{
+    color: white;
+    background-color: #FFc108;
+    padding: 8px;
+}
+
+.btn-alt{
+    background-color: white;
+    color: black;
+    margin-right: 16px;
+    border: 2px solid #FFc108;
+}
+
+/* Landing End */
+
+/* About */
+#about{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 28px;
+}
+
+#about > div {
+    width: 50%;
+}
+
+#about-stats{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align: center;
+    margin-top: 24px;
+}
+
+.about-stats-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.about-stats-item div{
+    width: 50px;
+    height: 10px;
+    background-color: #FFc108;
+    margin-bottom: 16px;
+}
+
+/* About End */
+
+/* Service Start */
+.service-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service-header h1{
+    position: relative;
+}
+
+.service-header h1::before{
+    content: "";
+    width: 50px;
+    height: 50px;
+    background: url("Coder/images/accent2.svg");
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    z-index: -1;
+}
+
+.service-detail{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 128px;
+    margin-top: 72px;
+}
+
+.service-detail-item{
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.service-detail-item:hover{
+    transform: scale(1.1);
+}
+
+.service-detail-item img{
+    width: 100%;
+}
+
+.service-detail-item h2{
+    font-size: 28px;
+    padding: 0 16px;
+
+}
+
+.service-detail-item p{
+    font-size: 22px;
+    padding: 0 16px;
+}
+
+/* Service End */
+
+/* Contact Start */
+.contact-detail{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 72px;
+    column-gap: 94px;
+}
+
+.contact-detail > div , .contact-detail > form{
+    width: 50%;
+}
+
+#contact h1{
+    position: relative;
+}
+
+#contact > h1::before{
+    content: "";
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background: url("Coder/images/accent1.svg");
+    z-index: -1;
+    top: -20px;
+    left: -28px;
+
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #FFc108;
+    padding: 64px 32px;
+}
+
+.form-group{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 32px;
+    margin-top: 32px;
+    grid-template-areas: "name subject"
+                            "email phone"
+                            "message message";
+}
+
+form h2{
+    font-size: 32px;
+    text-align: center;
+}
+
+#input-name{
+    grid-area: name;
+}
+
+#input-subject{
+    grid-area: subject;
+}
+
+#input-email{
+    grid-area: email;
+}
+
+#input-phone{
+    grid-area: phone;
+}
+
+#input-message{
+    grid-area: message;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+
+.input-group label{
+    font-weight: 700;
+    margin-bottom: 18px;
+    font-size: 24px;
+
+}
+
+.input-group input{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    font-size: 20px;
+}
+
+.input-group input:focus{
+    border-bottom: 1px solid #FFc108;
+}
+
+form button{
+    border: none;
+    
+}
+
+form button:hover{
+    cursor: pointer;
+}
+
+/* Contact End */
+
+/* Footer Start */
+footer{
+    padding: 16px 128px;
+    background-color: #FFc108;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p{
+    color: white;
+    width: 50%;
+}
+
+.social-icon{
+    display: flex;
+    gap: 32px;
+}
+/* Footer End */
+
+/* Media Query Start */
+@media only screen and (max-width: 1200px){
+    .service-detail{
+        gap: 28px;
+    }
+
+    .service-detail-item{
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .service-detail-item:hover{
+        transform: scale(1.1);
+    }
+
+    .contact-detail .form-group{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media only screen and (max-width: 992px){
+    #header,#footer{
+        padding: 16px 32px;
+    }
+
+    section{
+        padding: 64px 32px;
+    }
+
+    /* Landing Start */
+
+    #landing{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #landing > div{
+        width: 100%;
+    }
+
+    /* Landing End */
+
+    /* About Start */
+
+    #about{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #about > div{
+        width: 100%;
+    }
+
+    /* About End */
+
+    /* Service Start */
+
+    .service-detail{
+        gap: 16px;
+    }
+
+    /* Service End */
+
+    /* Contact Start */
+    .contact-detail{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-detail form , .contact-detail > div{
+        width: 100%;
+    }
+    /* Contact End */
+}
+/* Media Query End */
